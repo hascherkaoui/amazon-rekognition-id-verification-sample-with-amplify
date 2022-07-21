@@ -257,7 +257,8 @@ async function submitUser(props: RegNewUserWithIdCardProps, dispatch: Dispatch<R
                 variables: variables,
             }
         );
-
+            console.log(registerUserResponse.data);
+            
         if (!registerUserResponse.data?.registernewuserwithidcard?.Success) {
             // cleanup
             console.log("Cleaning up incomplete user registration...")
