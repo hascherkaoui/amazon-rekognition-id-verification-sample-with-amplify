@@ -86,8 +86,7 @@ type LoginUserResponse {
   FaceImage: String @aws_cognito_user_pools,
 }
 
-type DeleteUserResponse @modal
-@auth(rules: [{ allow: owner, operations: [create, read, update, delete]}]) 
+type DeleteUserResponse
 {
   Success: Boolean @aws_cognito_user_pools,
   Message: String @aws_cognito_user_pools,
